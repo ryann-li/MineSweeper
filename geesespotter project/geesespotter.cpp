@@ -6,59 +6,59 @@ char * createBoard(std::size_t xdim, std::size_t ydim){
      return p_memory;    
 }
 void computeNeighbors(char * board, std::size_t xdim, std::size_t ydim){
-// for (int i = 0; i < xdim*ydim; i++){
-//         //checking every entry until we hit a goose
-//         if (board[i] == 9){
-//             //increment above entry
-//             if (i >= xdim){
-//                 if (board[i-xdim] != 9){
-//                     board[i-xdim]++;
-//                 }
-//             }
-//             //increment down entry
-//             if (i < xdim*ydim-xdim){
-//                 if (board[i+xdim] != 9){
-//                     board[i+xdim]++;
-//                 }
-//             }
-//             //increment left entry
-//             if ((i % xdim) != 0){
-//                 if (board[i-1] != 9){
-//                     board[i-1]++;
-//                 }
-//             }
-//             //increment rightwards entry
-//             if ((i+1)%xdim != 0){
-//                 if (board[i+1] != 9){
-//                     board[i+1]++;
-//                 }
-//             }
-//             //increment up-left 
-//             if (i >= xdim && (i % xdim) != 0){
-//                 if (board[i-xdim-1] != 9){
-//                     board[i-xdim-1]++;
-//                 }
-//             }
-//             //increment up-right
-//             if (i >= xdim && (i+1)%xdim != 0){
-//                 if (board[i-xdim+1] != 9){
-//                     board[i-xdim+1]++;
-//                 }
-//             }
-//             //increment left down
-//             if (i < xdim*ydim-xdim && (i % xdim) != 0){
-//                 if (board[i+xdim-1] != 9){
-//                     board[i+xdim-1]++;
-//                 }
-//             }
-//             //increment right down
-//             if (i < xdim*ydim-xdim && (i+1)%xdim != 0){
-//                 if (board[i+xdim+1] != 9){
-//                     board[i+xdim+1]++;
-//                 }
-//             }
-//         }
-//     }
+for (int i = 0; i < xdim*ydim; i++){
+        //checking every entry until we hit a goose
+        if (board[i] == 9){
+            //increment above entry
+            if (i >= xdim){
+                if (board[i-xdim] != 9){
+                    board[i-xdim]++;
+                }
+            }
+            //increment down entry
+            if (i < xdim*ydim-xdim){
+                if (board[i+xdim] != 9){
+                    board[i+xdim]++;
+                }
+            }
+            //increment left entry
+            if ((i % xdim) != 0){
+                if (board[i-1] != 9){
+                    board[i-1]++;
+                }
+            }
+            //increment rightwards entry
+            if ((i+1)%xdim != 0){
+                if (board[i+1] != 9){
+                    board[i+1]++;
+                }
+            }
+            //increment up-left 
+            if (i >= xdim && (i % xdim) != 0){
+                if (board[i-xdim-1] != 9){
+                    board[i-xdim-1]++;
+                }
+            }
+            //increment up-right
+            if (i >= xdim && (i+1)%xdim != 0){
+                if (board[i-xdim+1] != 9){
+                    board[i-xdim+1]++;
+                }
+            }
+            //increment left down
+            if (i < xdim*ydim-xdim && (i % xdim) != 0){
+                if (board[i+xdim-1] != 9){
+                    board[i+xdim-1]++;
+                }
+            }
+            //increment right down
+            if (i < xdim*ydim-xdim && (i+1)%xdim != 0){
+                if (board[i+xdim+1] != 9){
+                    board[i+xdim+1]++;
+                }
+            }
+        }
+    }
 }
 void cleanBoard(char *board){
     delete[] board;
